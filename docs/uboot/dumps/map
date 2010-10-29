@@ -1,0 +1,105 @@
+Marvell>> map
+
+CPU Interface
+-------------
+SDRAM_CS0 ....base 00000000, size 128MB 
+SDRAM_CS1 ....disable
+SDRAM_CS2 ....disable
+SDRAM_CS3 ....disable
+PEX0_MEM ....base 90000000, size 128MB 
+PEX0_IO ....base f0000000, size   1MB 
+PCI0_MEM ....base 98000000, size 128MB 
+PCI0_IO ....base f0100000, size   1MB 
+INTER_REGS ....base f1000000, size   1MB 
+DEVICE_CS0 ....base fa000000, size   2MB 
+DEVICE_CS1 ....base f8000000, size  32MB 
+DEVICE_CS2 ....base fa800000, size   1MB 
+DEV_BOOCS ....base ff000000, size  16MB 
+CRYPTO ENG ....no such
+
+AHB To MBUS Bridge:
+-------------------
+win0 - PEX0_MEM base 90000000, ....size 128MB 
+win1 - PCI0_MEM base 98000000, ....size 128MB 
+win2 - PEX0_IO base f0000000, ....size   1MB 
+win3 - PCI0_IO base f0100000, ....size   1MB 
+win4 - DEV_BOOCS base ff000000, ....size  16MB 
+win5 - DEVICE_CS0 base fa000000, ....size   2MB 
+win6 - DEVICE_CS1 base f8000000, ....size  32MB 
+win7 - DEVICE_CS2 base fa800000, ....size   1MB 
+win8 - INTER_REGS base f1000000, ....size   1MB 
+
+PEX0:
+-----
+
+Pex Bars 
+
+Internal Regs Bar0.... base d0000000, size   1MB 
+DRAM Bar1............. base 00000000, size   1GB 
+Devices Bar2.......... base f0000000, size 256MB 
+
+Pex Decode Windows
+
+win0 - SDRAM_CS0 base 00000000, ....size 256MB 
+win1 - SDRAM_CS1 base 10000000, ....size 256MB 
+win2 - SDRAM_CS2 base 20000000, ....size 256MB 
+win3 - SDRAM_CS3 base 30000000, ....size 256MB 
+win4 - DEVICE_CS2 base f0000000, ....size 128MB 
+win5 - DEV_BOOCS base f8000000, ....size 128MB 
+default win - target unknown 
+Expansion ROM - DEV_BOOCS 
+
+PCI0:
+-----
+CS0_BAR.............. base 00000000, size 256MB 
+CS1_BAR.............. base 10000000, size 256MB 
+CS2_BAR.............. base 20000000, size 256MB 
+CS3_BAR.............. base 30000000, size 256MB 
+DEVCS0_BAR........... disable
+DEVCS1_BAR........... disable
+DEVCS2_BAR........... base f0000000, size 128MB 
+BOOTCS_BAR........... disable
+MEM_INTER_REGS_BAR... base d0000000, size   1MB 
+IO_INTER_REGS_BAR.... base d0000000, size   1MB 
+P2P_MEM0............. disable
+P2P_IO............... disable
+
+DMA:
+----
+win0 - DEVICE_CS0 base fa000000, ....size   2MB 
+win1 - PEX0_MEM base 90000000, ....size 128MB 
+win2 - PCI0_MEM base 98000000, ....size 128MB 
+win3 - PCI0_IO base f0100000, ....size   1MB 
+win4 - SDRAM_CS0 base 00000000, ....size 128MB 
+win5 - DEV_BOOCS base ff000000, ....size  16MB 
+win6 - DEVICE_CS1 base f8000000, ....size  32MB 
+win7 - DEVICE_CS2 base fa800000, ....size   1MB 
+
+ETH:
+----
+win0 - PEX0_MEM base 90000000, ....size 128MB 
+win1 - PCI0_MEM base 98000000, ....size 128MB 
+win2 - SDRAM_CS0 base 00000000, ....size 128MB 
+win3 - DEVICE_CS0 base fa000000, ....size   2MB 
+win4 - DEVICE_CS1 base f8000000, ....size  32MB 
+win5 - DEVICE_CS2 base fa800000, ....size   1MB 
+
+XOR:
+----
+win0 - DEVICE_CS0 base fa000000, size   2MB 
+win1 - PEX0_MEM base 90000000, size 128MB 
+win2 - PCI0_MEM base 98000000, size 128MB 
+win3 - PCI0_IO base f0100000, size   1MB 
+win4 - SDRAM_CS0 base 0, size 128MB 
+win5 - DEVICE_CS1 base f8000000, size  32MB 
+win6 - disable
+win7 - disable
+
+SATA:
+----
+win0 - SDRAM_CS0 base 00000000, ....size 256MB 
+win1 - SDRAM_CS1 base 10000000, ....size 256MB 
+win2 - SDRAM_CS2 base 20000000, ....size 256MB 
+win3 - SDRAM_CS3 base 30000000, ....size 256MB 
+Marvell>> 
+

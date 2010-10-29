@@ -1,0 +1,10 @@
+Marvell>> sp
+
+Bus: 0 Device: 0 Func: 0 Vendor ID: 11ab Device ID: 5182
+-------------------------------------------------------------------
+Class: Memory controller
+PCI_BAR0 (Mem-64bit) base: 0d0000000	size: 1048576 bytes
+PCI_BAR1 (Mem-64bit) base: 000000000		size: 1073741824 bytes
+PCI_BAR2 (Mem-64bit) base: 0f0000000	size: 268435456 bytes
+Marvell>> 
+

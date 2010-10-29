@@ -1,0 +1,32 @@
+Marvell>> printenv
+baudrate=115200
+loads_echo=0
+ipaddr=192.168.10.2
+serverip=192.168.10.3
+rootpath=/mnt/ARM_FS/
+cpuName=926
+CASset=min
+MALLOC_len=4
+ethprime=egiga0
+bootargs_root=root=/dev/nfs rw
+bootargs_end=:::DB88FXX81:egiga0:none
+image_name=uImage
+standalone=fsload 0x400000 $(image_name);setenv bootargs $(bootargs) root=/dev/mtdblock0 rw ip=$(ipaddr):$(serverip)$(bootargs_end); bootm 0x400000;
+ethaddr=00:AA:BB:CC:DD:10
+usb0Mode=host
+usb1Mode=host
+ethact=egiga0
+bootargs=console=ttyS0,115200 root=/dev/mtdblock3
+bootcmd=cp.b 0xff0a0000 0x200000 0x200000;bootm 200000
+stdin=serial
+stdout=serial
+stderr=serial
+enaMonExt=no
+enaFlashBuf=yes
+enaCpuStream=no
+bootdelay=3
+disaMvPnp=no
+overEthAddr=no
+
+Environment size: 680/40956 bytes
+Marvell>> 
